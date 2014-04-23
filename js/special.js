@@ -145,12 +145,10 @@ $(function(){
 	//滚动到头图以下时导航条加阴影
 	$(window).scroll(function () {
 		if ($(window).scrollTop() > winHeight) {
-			$("#navbar_menu_fixed").css('box-shadow','0 3px 3px #aaa');
-			$("#navbar_menu_fixed").css('-webkit-box-shadow','0 3px 3px #aaa');
+			$('#navbar_menu_fixed').addClass('shadowed');
 		}
 		else {
-			$("#navbar_menu_fixed").css('box-shadow','0 0 0 #aaa');
-			$("#navbar_menu_fixed").css('-webkit-box-shadow','0 0 0 #aaa');
+			$('#navbar_menu_fixed').removeClass('shadowed');
 		}
 	});
 });

@@ -6,6 +6,7 @@ body{
 }
 a{
 	cursor:pointer;
+	color:#CCC;
 }
 
 /**********overlay**********/
@@ -18,6 +19,23 @@ a{
 	opacity:0;
 	display:none;
 }
+/****nav导航**/
+
+.nav-pills>li>a{
+    height:25px;
+    margin: 0px; 
+    padding-bottom: 10px; 
+    padding-top: 10px
+}
+
+.topnav1,.topnav2,.topnav3{
+    background:#000;
+    margin-top:10px;
+    padding-left:20px;
+    padding-bottom:0px;
+}
+
+
 .hc-nav{
 	position: relative;
 	top: 10px;
@@ -42,10 +60,13 @@ a{
 	top: 0px;
 	background: #f6f6f6;
 	margin: 0;
-	box-shadow:0 0 0 #aaa;
-	-webkit-box-shadow:0 0 0 #aaa;
 }
-
+.shadowed{
+	box-shadow:0 3px 3px #aaa;
+	-webkit-box-shadow:0 3px 3px #aaa;
+	-moz-box-shadow:0 3px 3px #aaa;
+	-o-box-shadow:0 3px 3px #aaa;
+}
 .hc-nav li a{
 	border-radius:0;
 	margin:0;
