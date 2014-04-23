@@ -24,6 +24,7 @@ $(function(){
 
 	//显示深度分析box
 	$('.hc-inspect').click(function(e){
+		e.preventDefault();
 		//打开深度解析
 		$(this).addClass('actived');
 		$('.box.analy').css('opacity','1');
@@ -115,6 +116,7 @@ $(function(){
 	
 	//点击特别报导出现浮层，根据不同窗口宽度调用不同box，出现cover层
 	$(".hc-special").click(function(e){
+		e.preventDefault();
 		$(this).addClass('actived');
 		$('.cover').fadeOut(0);
 		if(winWidth>640){
