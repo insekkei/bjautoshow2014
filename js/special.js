@@ -27,12 +27,10 @@ $(function(){
 		e.preventDefault();
 		//打开深度解析
 		$(this).addClass('actived');
-		$('.box.analy').css('opacity','1');
-		$('.box.analy').css('z-index','1000');
+		$('.box.analy').css({opacity:1,'z-index':1000});
 		//关闭特别报导
 		$('.hc-special').removeClass('actived');
-		$('.box.spec').css('opacity','0');
-		$('.box.spec').css('z-index','-1');
+		$('.box.spec').css({opacity:0,'z-index':-1});
 
 		//深度解析浮层状态对cover层影响
 		var o2 = $('.box.analy').css('opacity');
@@ -77,8 +75,7 @@ $(function(){
 			if(dp.match('block')=='block'){
 				$('.cover').css('display','block');
 				$('.minibox').css('display','none');
-				$('.box.spec').css('opacity','1');
-				$('.box.spec').css('z-index','1000');
+				$('.box.spec').css({opacity:1,'z-index':1000});
 			}else if((dp.match('block')!='block')&&(o!=1)){
 				//去除cover层
 				$('.cover').css('display','none');	
@@ -122,11 +119,9 @@ $(function(){
 		if(winWidth>640){
 			//关闭深度解析
 			$('.hc-inspect').removeClass('actived');
-			$('.box.analy').css('opacity','0');
-			$('.box.analy').css('z-index','-1');
+			$('.box.analy').css({opacity:0,'z-index':-1});
 			//打开特别报导
-			$('.box.spec').css('opacity','1');
-			$('.box.spec').css('z-index','1000');
+			$('.box.spec').css({opacity:1,'z-index':1000});
 			
 		}else{
 			$('.minibox').toggle(100);
@@ -138,16 +133,14 @@ $(function(){
 	$('.cover').click(function(e){
 		$(this).fadeOut(0);
 		$('.minibox').fadeOut(100);
-		$('.box').css('opacity','0');
-		$('.box').css('z-index','-1');
+		$('.box').css({opacity:0,'z-index':-1});
 	});
 	
 	//关闭box
 	$('.close').click(function(e){
-		$('.box').css('opacity','0');
-		$('.box').css('z-index','-1');
-		$('.hc-special').removeClass('actived');
-		$('.hc-inspect').removeClass('actived');
+		e.preventDefault();
+		$('.box').css({opacity:0,'z-index':-1});
+		$('.hc-special,.hc-inspect').removeClass('actived');
 	});
 	//滚动到头图以下时导航条加阴影
 	$(window).scroll(function () {
